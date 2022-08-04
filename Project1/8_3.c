@@ -1,28 +1,20 @@
 #include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
-void is_prime(int a)
-{
-	int i = 2;
-	while (i <= sqrt(a))
-	{
-		if (a % i == 0)
-		{
-			break;
-		}
-		i++;
-	}
-	if (i > sqrt(a))
-	{
-		printf(" %d ", a);
-	}
-}
 int main()
 {
-	int a = 0;
-	for (a = 100; a <= 200; a++)
+	int i = 0;
+	int count = 0;
+	for (i = 1; i <= 100; i++)
 	{
-		is_prime(a);
+		if (i % 10 == 9)
+		{
+			printf(" %d ", i);
+			count++;
+		}
+		 if (i / 10 == 9)
+		{
+			printf(" %d ", i);
+			count++;
+		}
 	}
-	return 0;
+	printf("\n%d", count);
 }
